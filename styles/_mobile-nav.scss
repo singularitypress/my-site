@@ -1,0 +1,70 @@
+.mobile-nav__button {
+  // make the button stick to and float on the screen
+  position: fixed;
+  z-index: 100;
+
+  // make the button float in the top left of the screen
+  top: 20px;
+  left: 20px;
+
+  background-color: white; // button color
+  border-width: 4px;
+  border-color: black;
+  padding: 1rem 1.5rem; // make the button a little bigger
+  border-radius: 999px; // make the button rounded
+  cursor: pointer; // make the cursor look like you're hovering over a link
+}
+
+// when the menu is closed
+.closed {
+  // move the menu offscreen by pushing it to the right (x-axis) by 100vw (pixel width of the screen)
+  transform: translateX(100vw);
+
+  // make the menu also invisible by making the opacity 0
+  opacity: 0;
+}
+
+// when the menu is open
+.open {
+  // make the menu on-screen by making the offset on the x-axis 0, i.e. no offset
+  transform: translateX(0px);
+
+  // make the menu visible by making the opacity 1
+  opacity: 1;
+}
+
+// the overall mobile nav
+.mobile-nav {
+  // make sure the mobile nav sits on top of everything on the page except the button (button z-index higher than this)
+  position: fixed;
+  z-index: 90;
+
+  // mobile nav should be full screen
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+
+  background-color: white;
+  padding-top: 100px;
+
+  // make the change from the .closed to .open styles look smooth
+  transition: all 0.5s ease;
+}
+
+// stuff that applies to the list of links, we have this to hide the dots that would be on an unordered list
+.mobile-nav__links {
+  list-style: none;
+}
+
+// styles for the actual link, change font colour, border colour, etc in here
+.mobile-nav__link {
+  border-bottom: 2px dotted black;
+  font-weight: bold;
+  width: fit-content;
+}
+
+// hover styles for the link, not sure how much this really matters because it's not like you can hover with your phone
+.mobile-nav__link:hover {
+  border-bottom: none;
+}

@@ -1,18 +1,34 @@
 import Head from "next/head";
+import MobileNav from "../components/mobile-nav";
 
 import "../styles/globals.css";
+import "../styles/my-styles.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossOrigin="anonymous"
-        />
-      </Head>
+      <MobileNav navItems={[
+        {
+          text: "Home",
+          link: "/"
+        },
+        {
+          text: "Google",
+          link: "https://google.com"
+        },
+        {
+          text: "Instagram",
+          link: "https://instagram.com"
+        },
+        {
+          text: "Our Jupio Site",
+          link: "https://jupio.vercel.app"
+        },
+        {
+          text: "Cute Doggies",
+          link: "/dogs-are-the-cutest"
+        }
+      ]} />
       <Component {...pageProps} />
       <script
         async
