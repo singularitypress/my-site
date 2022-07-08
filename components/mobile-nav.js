@@ -4,7 +4,12 @@ import React, { useState } from "react";
 
 /**
  * NOTE: To see why we have "d-md-none d-lg-none d-xl-none" view 2. in mobile-nav.md
+ * 
  * NOTE: Styles can be found in /styles/_mobile-nav.scss
+ * 
+ * NOTE: If you want to hide your existing nav on mobile so you don't have that and this running at the same time,
+ * add "d-xs-none d-sm-none" classes to it
+ * 
  * @param navItems - view 1. in mobile-nav.md to see how you should pass items into navItems for <MobileNav navItems={ } />
  */
 const MobileNav = ({ navItems }) => {
